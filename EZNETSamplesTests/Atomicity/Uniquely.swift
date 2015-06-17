@@ -246,6 +246,134 @@ class Uniquely: XCTestCase {
 		unexpected().success(isUniqueNonObjCOptional2_1)
 		unexpected().success(isUniqueNonObjCOptional2_2)
 	}
+	
+	func testForObjectInBoxClassByCopyBox() {
+		
+		// クラスなので let で良い
+		let object1:BoxClass = BoxClass()
+		let optional1:BoxClass? = BoxClass()
+		
+		let isUniqueNonObjC1 = isUniquelyReferencedNonObjC(&object1.object)
+		
+		// オプショナル内のオブジェクトを直接 optional1?.object のようには判定できない。
+		let isUniqueNonObjCOptional1 = isUniquelyReferencedNonObjC(&optional1!.object)
+		
+		let object2 = object1
+		let optional2 = optional1
+		
+		let isUniqueNonObjC2_1 = isUniquelyReferencedNonObjC(&object1.object)
+		let isUniqueNonObjCOptional2_1 = isUniquelyReferencedNonObjC(&optional1!.object)
+		
+		let isUniqueNonObjC2_2 = isUniquelyReferencedNonObjC(&object2.object)
+		let isUniqueNonObjCOptional2_2 = isUniquelyReferencedNonObjC(&optional2!.object)
+		
+		expected().success(isUniqueNonObjC1)
+		expected("ボックスだけがコピーされ、中身は共有されるので、単一参照になります。").success(isUniqueNonObjC2_1)
+		expected("ボックスだけがコピーされ、中身は共有されるので、単一参照になります。").success(isUniqueNonObjC2_2)
+		
+		expected().success(isUniqueNonObjCOptional1)
+		expected("ボックスだけがコピーされ、中身は共有されるので、単一参照になります。").success(isUniqueNonObjCOptional2_1)
+		expected("ボックスだけがコピーされ、中身は共有されるので、単一参照になります。").success(isUniqueNonObjCOptional2_2)
+	}
+	
+	func testForObjectInBoxStructByCopyBox() {
+		
+		// 構造体なので var にしないと、メンバーを var で参照できない。
+		var object1:BoxStruct = BoxStruct()
+		var optional1:BoxStruct? = BoxStruct()
+		
+		let isUniqueNonObjC1 = isUniquelyReferencedNonObjC(&object1.object)
+		
+		// オプショナル内のオブジェクトを直接 optional1?.object のようには判定できない。
+		let isUniqueNonObjCOptional1 = isUniquelyReferencedNonObjC(&optional1!.object)
+		
+		var object2 = object1
+		var optional2 = optional1
+		
+		let isUniqueNonObjC2_1 = isUniquelyReferencedNonObjC(&object1.object)
+		let isUniqueNonObjCOptional2_1 = isUniquelyReferencedNonObjC(&optional1!.object)
+		
+		let isUniqueNonObjC2_2 = isUniquelyReferencedNonObjC(&object2.object)
+		let isUniqueNonObjCOptional2_2 = isUniquelyReferencedNonObjC(&optional2!.object)
+		
+		expected().success(isUniqueNonObjC1)
+		unexpected("ボックスと合わせて中身もコピーされるため、共有されます。").success(isUniqueNonObjC2_1)
+		unexpected("ボックスと合わせて中身もコピーされるため、共有されます。").success(isUniqueNonObjC2_2)
+		
+		expected().success(isUniqueNonObjCOptional1)
+		unexpected("ボックスと合わせて中身もコピーされるため、共有されます。").success(isUniqueNonObjCOptional2_1)
+		unexpected("ボックスと合わせて中身もコピーされるため、共有されます。").success(isUniqueNonObjCOptional2_2)
+	}
+	
+	func testOptionalNil() {
+		
+		var object1:Object? = nil
+		
+		let isUniqueNonObjC1 = isUniquelyReferencedNonObjC(&object1)
+		
+		var object2 = object1
+
+		let isUniqueNonObjC2 = isUniquelyReferencedNonObjC(&object2)
+
+		unexpected("nil はユニークではないと判定されるようです。").success(isUniqueNonObjC1)
+		unexpected("nil はユニークではないと判定されるようです。").success(isUniqueNonObjC2)
+	}
+	
+	func testWeakBoxClass() {
+		
+		var object = Object()
+		
+		let isUniqueObject1 = isUniquelyReferencedNonObjC(&object)
+		
+		let box1 = WeakBoxClass(object)
+
+		let isUniqueObject2 = isUniquelyReferencedNonObjC(&object)
+		let isUniqueObjectInBox2_1 = isUniquelyReferencedNonObjC(&box1.object)
+		let isUniqueObjectInBox2_2 = box1.isObjectUnique
+		
+		let box2 = WeakBoxClass(object)
+		
+		let isUniqueObject3 = isUniquelyReferencedNonObjC(&object)
+		let isUniqueObjectInBox3_1 = isUniquelyReferencedNonObjC(&box2.object)
+		let isUniqueObjectInBox3_2 = box2.isObjectUnique
+
+		expected().success(isUniqueObject1)
+		expected("Weak なので共有されません。").success(isUniqueObject2)
+		unexpected("ただし Weak そのものを判定すると共有として扱われます。").success(isUniqueObjectInBox2_1)
+		unexpected("ボックス内部から Weak を判定しても同じです。").success(isUniqueObjectInBox2_2)
+
+		expected("もちろんボックスを複製しても共有状態は変化しません。").success(isUniqueObject3)
+		unexpected("もちろんボックスを複製しても共有状態は変化しません。").success(isUniqueObjectInBox3_1)
+		unexpected("もちろんボックスを複製しても共有状態は変化しません。").success(isUniqueObjectInBox3_2)
+	}
+	
+	func testWeakBoxStruct() {
+		
+		var object = Object()
+		
+		let isUniqueObject1 = isUniquelyReferencedNonObjC(&object)
+		
+		var box1 = WeakBoxStruct(object)
+		
+		let isUniqueObject2 = isUniquelyReferencedNonObjC(&object)
+		let isUniqueObjectInBox2_1 = isUniquelyReferencedNonObjC(&box1.object)
+		let isUniqueObjectInBox2_2 = box1.isObjectUnique
+		
+		let box2 = WeakBoxClass(object)
+		
+		let isUniqueObject3 = isUniquelyReferencedNonObjC(&object)
+		let isUniqueObjectInBox3_1 = isUniquelyReferencedNonObjC(&box2.object)
+		let isUniqueObjectInBox3_2 = box2.isObjectUnique
+
+		expected().success(isUniqueObject1)
+		expected("Weak なので共有されません。").success(isUniqueObject2)
+		unexpected("ただし Weak そのものを判定すると共有として扱われます。").success(isUniqueObjectInBox2_1)
+		unexpected("ボックス内部から Weak を判定しても同じです。").success(isUniqueObjectInBox2_2)
+
+		expected("もちろんボックスを複製しても共有状態は変化しません。").success(isUniqueObject3)
+		unexpected("もちろんボックスを複製しても共有状態は変化しません。").success(isUniqueObjectInBox3_1)
+		unexpected("もちろんボックスを複製しても共有状態は変化しません。").success(isUniqueObjectInBox3_2)
+	}
 }
 
 extension Uniquely {
@@ -280,5 +408,38 @@ extension Uniquely {
 	struct BoxStruct {
 
 		var object = Object()
+	}
+	
+	class WeakBoxClass {
+		
+		weak var object:Object?
+		
+		init(_ object:Object) {
+			
+			self.object = object
+		}
+		
+		var isObjectUnique:Bool {
+			
+			return isUniquelyReferencedNonObjC(&self.object)
+		}
+	}
+	
+	struct WeakBoxStruct {
+		
+		weak var object:Object?
+		
+		init(_ object:Object) {
+			
+			self.object = object
+		}
+		
+		var isObjectUnique:Bool {
+		
+			mutating get {
+
+				return isUniquelyReferencedNonObjC(&self.object)
+			}
+		}
 	}
 }
