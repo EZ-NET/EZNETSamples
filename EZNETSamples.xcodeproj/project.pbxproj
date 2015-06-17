@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4FA4E3CE028A9A165A4867CF /* Pods_EZNETSamplesTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADE897E01CB7848E66E1EE6F /* Pods_EZNETSamplesTests.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		B135A7E51B317515008F99FC /* Uniquely.swift in Sources */ = {isa = PBXBuildFile; fileRef = B135A7E41B317515008F99FC /* Uniquely.swift */; };
 		B148293D1B314D8200E7F91F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B148293C1B314D8200E7F91F /* AppDelegate.swift */; };
 		B148293F1B314D8200E7F91F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B148293E1B314D8200E7F91F /* ViewController.swift */; };
 		B14829411B314D8200E7F91F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B14829401B314D8200E7F91F /* Images.xcassets */; };
@@ -29,6 +30,7 @@
 		371761238258322CDF41A9C1 /* Pods-EZNETSamplesTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EZNETSamplesTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EZNETSamplesTests/Pods-EZNETSamplesTests.debug.xcconfig"; sourceTree = "<group>"; };
 		4D5328524B6156B27E28D8D4 /* Pods-EZNETSamplesTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EZNETSamplesTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-EZNETSamplesTests/Pods-EZNETSamplesTests.release.xcconfig"; sourceTree = "<group>"; };
 		ADE897E01CB7848E66E1EE6F /* Pods_EZNETSamplesTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EZNETSamplesTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B135A7E41B317515008F99FC /* Uniquely.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Uniquely.swift; sourceTree = "<group>"; };
 		B14829371B314D8200E7F91F /* EZNETSamples.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EZNETSamples.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B148293B1B314D8200E7F91F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B148293C1B314D8200E7F91F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -67,6 +69,14 @@
 				4D5328524B6156B27E28D8D4 /* Pods-EZNETSamplesTests.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		B135A7E31B3174F4008F99FC /* Atomicity */ = {
+			isa = PBXGroup;
+			children = (
+				B135A7E41B317515008F99FC /* Uniquely.swift */,
+			);
+			path = Atomicity;
 			sourceTree = "<group>";
 		};
 		B148292E1B314D8200E7F91F = {
@@ -113,6 +123,7 @@
 		B148294C1B314D8200E7F91F /* EZNETSamplesTests */ = {
 			isa = PBXGroup;
 			children = (
+				B135A7E31B3174F4008F99FC /* Atomicity */,
 				B148294F1B314D8200E7F91F /* EZNETSamplesTests.swift */,
 				B148294D1B314D8200E7F91F /* Supporting Files */,
 			);
@@ -296,6 +307,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B14829501B314D8200E7F91F /* EZNETSamplesTests.swift in Sources */,
+				B135A7E51B317515008F99FC /* Uniquely.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
