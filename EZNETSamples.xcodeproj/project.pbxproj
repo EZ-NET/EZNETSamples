@@ -1,0 +1,415 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B148293D1B314D8200E7F91F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B148293C1B314D8200E7F91F /* AppDelegate.swift */; };
+		B148293F1B314D8200E7F91F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B148293E1B314D8200E7F91F /* ViewController.swift */; };
+		B14829411B314D8200E7F91F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B14829401B314D8200E7F91F /* Images.xcassets */; };
+		B14829441B314D8200E7F91F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B14829421B314D8200E7F91F /* Main.storyboard */; };
+		B14829501B314D8200E7F91F /* EZNETSamplesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B148294F1B314D8200E7F91F /* EZNETSamplesTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B148294A1B314D8200E7F91F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B148292F1B314D8200E7F91F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B14829361B314D8200E7F91F;
+			remoteInfo = EZNETSamples;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		B14829371B314D8200E7F91F /* EZNETSamples.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EZNETSamples.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B148293B1B314D8200E7F91F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B148293C1B314D8200E7F91F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B148293E1B314D8200E7F91F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B14829401B314D8200E7F91F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		B14829431B314D8200E7F91F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B14829491B314D8200E7F91F /* EZNETSamplesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EZNETSamplesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B148294E1B314D8200E7F91F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B148294F1B314D8200E7F91F /* EZNETSamplesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EZNETSamplesTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B14829341B314D8200E7F91F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B14829461B314D8200E7F91F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B148292E1B314D8200E7F91F = {
+			isa = PBXGroup;
+			children = (
+				B14829391B314D8200E7F91F /* EZNETSamples */,
+				B148294C1B314D8200E7F91F /* EZNETSamplesTests */,
+				B14829381B314D8200E7F91F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B14829381B314D8200E7F91F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B14829371B314D8200E7F91F /* EZNETSamples.app */,
+				B14829491B314D8200E7F91F /* EZNETSamplesTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B14829391B314D8200E7F91F /* EZNETSamples */ = {
+			isa = PBXGroup;
+			children = (
+				B148293C1B314D8200E7F91F /* AppDelegate.swift */,
+				B148293E1B314D8200E7F91F /* ViewController.swift */,
+				B14829401B314D8200E7F91F /* Images.xcassets */,
+				B14829421B314D8200E7F91F /* Main.storyboard */,
+				B148293A1B314D8200E7F91F /* Supporting Files */,
+			);
+			path = EZNETSamples;
+			sourceTree = "<group>";
+		};
+		B148293A1B314D8200E7F91F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B148293B1B314D8200E7F91F /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B148294C1B314D8200E7F91F /* EZNETSamplesTests */ = {
+			isa = PBXGroup;
+			children = (
+				B148294F1B314D8200E7F91F /* EZNETSamplesTests.swift */,
+				B148294D1B314D8200E7F91F /* Supporting Files */,
+			);
+			path = EZNETSamplesTests;
+			sourceTree = "<group>";
+		};
+		B148294D1B314D8200E7F91F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B148294E1B314D8200E7F91F /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B14829361B314D8200E7F91F /* EZNETSamples */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B14829531B314D8200E7F91F /* Build configuration list for PBXNativeTarget "EZNETSamples" */;
+			buildPhases = (
+				B14829331B314D8200E7F91F /* Sources */,
+				B14829341B314D8200E7F91F /* Frameworks */,
+				B14829351B314D8200E7F91F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EZNETSamples;
+			productName = EZNETSamples;
+			productReference = B14829371B314D8200E7F91F /* EZNETSamples.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B14829481B314D8200E7F91F /* EZNETSamplesTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B14829561B314D8200E7F91F /* Build configuration list for PBXNativeTarget "EZNETSamplesTests" */;
+			buildPhases = (
+				B14829451B314D8200E7F91F /* Sources */,
+				B14829461B314D8200E7F91F /* Frameworks */,
+				B14829471B314D8200E7F91F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B148294B1B314D8200E7F91F /* PBXTargetDependency */,
+			);
+			name = EZNETSamplesTests;
+			productName = EZNETSamplesTests;
+			productReference = B14829491B314D8200E7F91F /* EZNETSamplesTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B148292F1B314D8200E7F91F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = "EasyStyle G.K.";
+				TargetAttributes = {
+					B14829361B314D8200E7F91F = {
+						CreatedOnToolsVersion = 6.3.2;
+					};
+					B14829481B314D8200E7F91F = {
+						CreatedOnToolsVersion = 6.3.2;
+						TestTargetID = B14829361B314D8200E7F91F;
+					};
+				};
+			};
+			buildConfigurationList = B14829321B314D8200E7F91F /* Build configuration list for PBXProject "EZNETSamples" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B148292E1B314D8200E7F91F;
+			productRefGroup = B14829381B314D8200E7F91F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B14829361B314D8200E7F91F /* EZNETSamples */,
+				B14829481B314D8200E7F91F /* EZNETSamplesTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B14829351B314D8200E7F91F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B14829411B314D8200E7F91F /* Images.xcassets in Resources */,
+				B14829441B314D8200E7F91F /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B14829471B314D8200E7F91F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B14829331B314D8200E7F91F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B148293F1B314D8200E7F91F /* ViewController.swift in Sources */,
+				B148293D1B314D8200E7F91F /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B14829451B314D8200E7F91F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B14829501B314D8200E7F91F /* EZNETSamplesTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B148294B1B314D8200E7F91F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B14829361B314D8200E7F91F /* EZNETSamples */;
+			targetProxy = B148294A1B314D8200E7F91F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		B14829421B314D8200E7F91F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B14829431B314D8200E7F91F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B14829511B314D8200E7F91F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		B14829521B314D8200E7F91F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		B14829541B314D8200E7F91F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = EZNETSamples/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		B14829551B314D8200E7F91F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = EZNETSamples/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		B14829571B314D8200E7F91F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = EZNETSamplesTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EZNETSamples.app/Contents/MacOS/EZNETSamples";
+			};
+			name = Debug;
+		};
+		B14829581B314D8200E7F91F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = EZNETSamplesTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EZNETSamples.app/Contents/MacOS/EZNETSamples";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B14829321B314D8200E7F91F /* Build configuration list for PBXProject "EZNETSamples" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B14829511B314D8200E7F91F /* Debug */,
+				B14829521B314D8200E7F91F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B14829531B314D8200E7F91F /* Build configuration list for PBXNativeTarget "EZNETSamples" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B14829541B314D8200E7F91F /* Debug */,
+				B14829551B314D8200E7F91F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		B14829561B314D8200E7F91F /* Build configuration list for PBXNativeTarget "EZNETSamplesTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B14829571B314D8200E7F91F /* Debug */,
+				B14829581B314D8200E7F91F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B148292F1B314D8200E7F91F /* Project object */;
+}
