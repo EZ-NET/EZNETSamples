@@ -1,0 +1,10 @@
+PODS:
+  - ESTestKit (0.3.1)
+
+DEPENDENCIES:
+  - ESTestKit (~> 0.3.1)
+
+SPEC CHECKSUMS:
+  ESTestKit: 5dd6ef2049b23c5a5bee69068369ca0e73a901d1
+
+COCOAPODS: 0.37.2
