@@ -13,6 +13,7 @@
 		B11CF54B1B3291B900A42B49 /* SampleModuleA.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B11CF5361B3291B900A42B49 /* SampleModuleA.framework */; };
 		B11CF54C1B3291B900A42B49 /* SampleModuleA.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B11CF5361B3291B900A42B49 /* SampleModuleA.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B11CF5561B3291F700A42B49 /* Enum.swift in Sources */ = {isa = PBXBuildFile; fileRef = B11CF5551B3291F700A42B49 /* Enum.swift */; };
+		B127F1BD1B36536400494CF0 /* ConvertToArrayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B127F1BC1B36536400494CF0 /* ConvertToArrayTests.swift */; };
 		B135A7E51B317515008F99FC /* Uniquely.swift in Sources */ = {isa = PBXBuildFile; fileRef = B135A7E41B317515008F99FC /* Uniquely.swift */; };
 		B148293D1B314D8200E7F91F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B148293C1B314D8200E7F91F /* AppDelegate.swift */; };
 		B148293F1B314D8200E7F91F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B148293E1B314D8200E7F91F /* ViewController.swift */; };
@@ -61,6 +62,7 @@
 		B11CF5381B3291B900A42B49 /* SampleModuleA.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SampleModuleA.h; sourceTree = "<group>"; };
 		B11CF53A1B3291B900A42B49 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B11CF5551B3291F700A42B49 /* Enum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Enum.swift; sourceTree = "<group>"; };
+		B127F1BC1B36536400494CF0 /* ConvertToArrayTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConvertToArrayTests.swift; sourceTree = "<group>"; };
 		B135A7E41B317515008F99FC /* Uniquely.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Uniquely.swift; sourceTree = "<group>"; };
 		B14829371B314D8200E7F91F /* EZNETSamples.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EZNETSamples.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B148293B1B314D8200E7F91F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -136,6 +138,14 @@
 			path = Types;
 			sourceTree = "<group>";
 		};
+		B127F1B91B36532600494CF0 /* Tuple */ = {
+			isa = PBXGroup;
+			children = (
+				B127F1BC1B36536400494CF0 /* ConvertToArrayTests.swift */,
+			);
+			path = Tuple;
+			sourceTree = "<group>";
+		};
 		B135A7E31B3174F4008F99FC /* Atomicity */ = {
 			isa = PBXGroup;
 			children = (
@@ -190,6 +200,7 @@
 		B148294C1B314D8200E7F91F /* EZNETSamplesTests */ = {
 			isa = PBXGroup;
 			children = (
+				B127F1B91B36532600494CF0 /* Tuple */,
 				B11CF52E1B32917700A42B49 /* Enum */,
 				B135A7E31B3174F4008F99FC /* Atomicity */,
 				B148294F1B314D8200E7F91F /* EZNETSamplesTests.swift */,
@@ -426,6 +437,7 @@
 			files = (
 				B11CF5301B3291A200A42B49 /* EnumToString.swift in Sources */,
 				B14829501B314D8200E7F91F /* EZNETSamplesTests.swift in Sources */,
+				B127F1BD1B36536400494CF0 /* ConvertToArrayTests.swift in Sources */,
 				B135A7E51B317515008F99FC /* Uniquely.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -655,6 +667,7 @@
 				B11CF54F1B3291B900A42B49 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B14829321B314D8200E7F91F /* Build configuration list for PBXProject "EZNETSamples" */ = {
 			isa = XCConfigurationList;
